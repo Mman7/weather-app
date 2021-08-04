@@ -31,6 +31,12 @@ export default function container() {
         {` `} Location: {` `}
         {ifGetData() ? dataGet.name : "waiting..."}
       </h2>
+
+      <h2>
+        <i className="fas fa-database"></i>
+        {` `} Base: {` `}
+        {ifGetData() ? dataGet.base : "waiting..."}
+      </h2>
       <h1 className="current-temp">
         <i className="fas fa-thermometer-empty"></i>
         {` `}Current Temperature:{` `}
