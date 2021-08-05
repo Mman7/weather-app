@@ -23,7 +23,8 @@ export default function container() {
           alt=""
         />
         <h1>
-          Weather Status: {ifGetData() ? dataGet.weather[0].main : "waiting..."}
+          Weather Status:{" "}
+          {ifGetData() ? dataGet.weather[0].description : "waiting..."}
         </h1>
       </div>
       <h2 className="location-name">
