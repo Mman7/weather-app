@@ -22,7 +22,7 @@ export default function container() {
           }`}
           alt=""
         />
-        <h1>
+        <h1 className="status">
           Weather Status:{" "}
           {ifGetData() ? dataGet.weather[0].description : "waiting..."}
         </h1>
@@ -57,6 +57,7 @@ export default function container() {
         {ifGetData() ? FTC(dataGet.main.temp_min).toFixed() : "waiting..."}
         °C
       </h3>
+      <h6 className="tips">if you not on pc, please turn on GPS</h6>
     </div>
   );
 }

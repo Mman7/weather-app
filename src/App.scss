@@ -21,6 +21,8 @@
 }
 
 .container {
+  display: flex;
+  flex-direction: column;
   background: rgb(0, 0, 0);
   background: linear-gradient(
     180deg,
@@ -31,7 +33,9 @@
   font-size: calc(0.65rem + 0.25vw);
   padding: 1em;
   border-radius: 25px;
-
+  .status {
+    font-size: calc(1rem + 1vw);
+  }
   .current-temp {
     padding-bottom: 0.5em;
   }
@@ -43,5 +47,21 @@
   #temp-icon {
     filter: invert(60%) sepia(11%) saturate(599%) hue-rotate(169deg)
       brightness(86%) contrast(93%);
+  }
+  .tips {
+    animation: fade 1s ease alternate infinite;
+    font-size: 1rem;
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.55;
+    }
   }
 }
